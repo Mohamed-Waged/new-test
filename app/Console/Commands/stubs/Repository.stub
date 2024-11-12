@@ -1,0 +1,25 @@
+<?php
+
+namespace Modules\@module_name@\Repositories;
+
+// repositories
+use App\Repositories\BaseRepository;
+use Modules\@module_name@\Repositories\Contracts\@entity_name@RepositoryInterface;
+
+// models
+use Modules\@module_name@\Entities\@entity_name@;
+
+class @entity_name@Repository extends BaseRepository implements @entity_name@RepositoryInterface
+{
+    protected $model;
+  
+    /**
+     * @entity_name@Repository constructor.
+     * @param @entity_name@ $model
+     */
+    public function __construct(@entity_name@ $model)
+    {
+        $this->model = $model;
+    }
+
+}

@@ -1,0 +1,8 @@
+<?php   
+
+namespace Modules\@module_name@\Repositories\Contracts;
+
+interface @entity_name@RepositoryInterface
+{
+    
+}

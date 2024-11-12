@@ -1,0 +1,13 @@
+{
+    "name": "Lecturers",
+    "alias": "lecturers",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\Lecturers\\Providers\\LecturersServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}

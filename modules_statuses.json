@@ -1,0 +1,14 @@
+{
+    "Books": true,
+    "Consultations": true,
+    "Coupons": true,
+    "Courses": true,
+    "Lecturers": true,
+    "Messages": true,
+    "Notifications": true,
+    "Pages": true,
+    "Reports": true,
+    "Roles": true,
+    "Settings": true,
+    "Users": true
+}
