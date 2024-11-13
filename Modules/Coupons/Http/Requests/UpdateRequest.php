@@ -26,7 +26,38 @@ class UpdateRequest extends FormRequest
         $id = last(request()->segments());
 
         return [
-            //
+            'imageBase64'       => 'nullable',
+
+            'lecturer'          => 'required|array',
+            'lecturer.id'       => 'required|exists:lecturers,id',
+
+            'en.title'          => [
+                'required',
+                'regex:' . GlobalConstants::TITLE_REGEX,
+                Rule::unique('couponable_translations', 'title')
+                    ->where('locale', 'en')
+                    ->ignore(decrypt($id), 'couponable_id')
+            ],
+
+            'ar.title'          => [
+                'required',
+                'regex:' . GlobalConstants::TITLE_REGEX,
+                Rule::unique('couponable_translations', 'title')
+                    ->where('locale', 'ar')
+                    ->ignore(decrypt($id), 'couponable_id')
+            ],
+
+            'en.body'           => 'nullable|regex:' . GlobalConstants::TITLE_REGEX,
+            'ar.body'           => 'nullable|regex:' . GlobalConstants::TITLE_REGEX,
+
+            'couponeableId'     => 'nullable',
+            'couponeableType'   => 'nullable',
+
+            'couponCount'       => 'required|numeric',
+            'couponPercentage'  => 'required|numeric',
+
+            'sort'              => 'required|numeric',
+            'status'            => 'required|in:active,inactive'
         ];
     }
 }

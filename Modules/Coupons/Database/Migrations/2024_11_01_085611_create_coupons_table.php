@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->bigInteger('lecturer_id')->unsigned()->nullable();
 
-            $table->string('couponeable_id')->nullable();
+            $table->bigInteger('couponeable_id')->unsigned()->nullable();
             $table->string('couponeable_type')->nullable();
 
             $table->integer('coupon_count')->default(false);
