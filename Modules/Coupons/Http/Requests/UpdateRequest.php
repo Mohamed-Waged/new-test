@@ -2,6 +2,8 @@
 
 namespace Modules\Coupons\Http\Requests;
 
+use Illuminate\Validation\Rule;
+use App\Constants\GlobalConstants;
 use Illuminate\Foundation\Http\FormRequest;
 
 class UpdateRequest extends FormRequest
